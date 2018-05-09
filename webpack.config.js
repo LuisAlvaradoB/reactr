@@ -5,7 +5,7 @@ const cssModules = "modules&importLoaders=1&localIdentName=[name]__[local]__[has
 
 module.exports = {
     resolve : {
-        extensions : ["",".js",".jsx"] 
+        extensions : ["",".js",".jsx"]
     },
 
     entry : ["./src/index.jsx"],
@@ -15,13 +15,13 @@ module.exports = {
         publicPath : "/"
     },
 
-    module : {
-        loaders : [
-            { test : /(\.js|jsx)$/, exclude : /node_modules/, loaders : ["babel"] },
-            { test : /\.css$/, loader : "style-loader!css-loader?${cssModules}"}
+    module: {
+        loaders: [
+          { test: /(\.js|jsx)$/, exclude: /node_modules/, loaders: ['babel'] },
+          { test: /\.css$/, loader: `style-loader!css-loader?${cssModules}` }
         ]
-    },
-
+      },
+      
     devServer : {
         host : "0.0.0.0",
         port : 8080,
